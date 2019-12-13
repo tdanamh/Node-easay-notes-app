@@ -13,3 +13,8 @@ MongoServer
 
 Node server
 node server.js
+
+
+Git 
+ git config --global user.email "bob@example.com"
+ git config --global github.user myusername
