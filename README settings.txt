@@ -1,0 +1,15 @@
+Mongo
+
+use db_name
+show collections()
+db.collection_name.find().pretty()
+db.collection_name.insert({"field1":"value1"})
+db.collection_name.drop()
+
+From node-easy-notes-app
+
+MongoServer
+"C:\Program Files\MongoDB\Server\4.2\bin\mongod.exe" --dbpath="c:\data\db"
+
+Node server
+node server.js
