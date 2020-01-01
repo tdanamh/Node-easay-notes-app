@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>My Notes</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="notes.js"></script>
+
+	<link rel="shortcut icon" type="image/png" href="/icon.png"/>
+
+	<!-- Sweetalert hosted -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
+  <!-- Bootstrap core CSS -->
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <!-- Custom styles for this template -->
+  <link href="sticky-footer.css" rel="stylesheet">
+
+  <style>
+  #timerdiv {
+    background: #17A2BB;
+    height: 70px;
+    width:100px;
+    border-radius: 15px;
+    padding:10px;
+    font-size:18px;
+    color:#fff;   
+    margin: 50px auto;
+    text-align: center;
+    text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+    color: #333;  
+  }
+  </style>
+
+</head>
+<body>
+
+
+    <img src="settings.png"  data-toggle="modal" data-target="#exampleModal">
+
+    <!-- Modal for settings-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Your settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form id="colorPickerForm">
+
+              <input type="color" name="favcolor" id="favcolor" value="#ff0000">
+              <input type="submit">
+
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Clock with setInterval and clearInterval -->
+    <div id='timerdiv' onclick="useClock()">
+    </div>
+
+	 <!-- Begin page content -->
+    <main role="main" class="container">
+
+      <h1 class="mt-5">These are your current notes</h1>
+
+      <p class="lead">Your notes are permanently available thanks to our good servers</p>
+      <p>You can delete all the notes or one by one</p>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Thanks for using our site</span>
+      </div>
+    </footer>
+
+</body>
+</html>

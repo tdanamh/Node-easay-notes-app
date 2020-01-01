@@ -1,8 +1,10 @@
 const Note = require('../models/note.model.js');
 
+const Swal = require('sweetalert2');
+
 // Create and Save a new Note
 exports.create = (req, res) => {
-// Validate request
+    // Validate request
     if(!req.body.content) {
         return res.status(400).send({
             message: "Note content can not be empty"
@@ -125,3 +127,4 @@ exports.deleteAll = (req, res) => {
         });
     });
 };
+

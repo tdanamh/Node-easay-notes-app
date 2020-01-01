@@ -16,8 +16,11 @@
   "author": "tdana",
   "license": "MIT",
   "dependencies": {
+    "animate.css": "^3.7.2",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.8.0"
+    "mongoose": "^5.8.0",
+    "requirejs": "^2.3.6",
+    "sweetalert2": "^9.5.3"
   }
 }

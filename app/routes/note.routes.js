@@ -1,6 +1,7 @@
 module.exports = (app) => {
     const notes = require('../controllers/note.controller.js');
 
+
     // Create a new Note
     app.post('/notes', notes.create);
 
@@ -17,4 +18,5 @@ module.exports = (app) => {
     app.delete('/notes/:noteId', notes.delete);
 
     app.delete('/notes', notes.deleteAll);
+
 }

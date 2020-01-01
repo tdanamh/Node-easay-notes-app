@@ -7,6 +7,7 @@ var cors = require('cors');
 // create express app
 const app = express();
 
+//create path
 const path = require('path');
 
 // parse requests of content-type - application/x-www-form-urlencoded
@@ -33,10 +34,12 @@ mongoose.connect(dbConfig.url, {
     process.exit();
 });
 
+//use the public folder to access pages
 app.use(express.static('public'));
 
 // Require Notes routes
 require('./app/routes/note.routes.js')(app);
+require('./app/routes/user.routes.js')(app);
 
 // listen for requests
 app.listen(3000, () => {
