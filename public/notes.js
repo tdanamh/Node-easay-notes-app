@@ -14,6 +14,7 @@ beawareof.push({"title":"Be careful",
 
 
 $(document).ready(function(){
+	
 	addForm();
 	prepareDOM();	
 	$('#colorPickerForm').submit(setColor);
@@ -29,6 +30,10 @@ $(document).ready(function(){
 		$("main").append("<p><b>" + currentItem.title + "</b></p>");
 		$("main").append("<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + currentItem.message + "</p>");
 	}
+
+	presskey();
+
+	createAudioElement();
 });
 
 
@@ -235,4 +240,28 @@ function startClock() {
 	clockInterval = window.setInterval(function(){
 		currentLocalTime() }, 1000);	
 	isClockRunning = true;
+}
+
+function presskey() {
+	//press r for resetting the background color
+	$("body").on("keypress",resetColorByKey);
+}
+
+
+function resetColorByKey(e) {
+	if(e.keyCode === 114) {
+		$("#timerdiv").css("background-color","#f8f9fa");
+	}
+}
+
+function createAudioElement() {
+	var x = document.createElement("AUDIO");
+	if (x.canPlayType("audio/mpeg")) {
+		x.setAttribute("src","media/song.mp3");
+	} else {
+		x.setAttribute("src","media/song.ogg");
+	}
+
+	x.setAttribute("controls", "controls");
+	document.body.appendChild(x);
 }

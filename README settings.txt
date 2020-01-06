@@ -22,5 +22,5 @@ Git
 
 Packages
 	cd node_modules
-	npm install weetalert2
+	npm install sweetalert2
 	npm install animate.css --save
